@@ -12,6 +12,8 @@ pillow = "*"
 psycopg2 = "*"
 django-crispy-forms = "*"
 django-bootstrap-modal-forms = "*"
+psycopg2-binary = "*"
+dj-database-url = "*"
 
 [dev-packages]
 autopep8 = "*"
