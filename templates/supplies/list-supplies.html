@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% block title %}
+    {{title}}
+{%endblock title %} 
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for supp in supplies %}
+          <div class="col">
+            <div class="card shadow-sm">              
+              <img src="/media/{{supp.image}}" alt="{{supp.name}}" width='100%' height="225px">
+              <div class="card-body">
+                <div class="text-center">Mã vật tư: {{supp.code}}.</div>
+                <div class="text-center">Tên vật tư: {{supp.name}}.</div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mt-3">
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="">View</a></button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
